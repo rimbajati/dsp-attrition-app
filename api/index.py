@@ -1,19 +1,19 @@
 from flask import Flask, render_template
 import os
 
-app = Flask(__name__)
-
-@app.route('/api/test')
-def test():
-    return {"status": "ok", "message": "Hello from Flask!"}
+app = Flask(__name__, template_folder='../templates', static_folder='../static')
 
 @app.route('/')
 def home():
-    return "Welcome to Attrition App"
+    return render_template('home.html')
 
-@app.route('/api/dashboard')
+@app.route('/dashboard')
 def get_dashboard():
-    return {"status": "ok", "message": "Dashboard data here"}
+    return render_template('dashboard_view.html')
+
+@app.route('/api/health')
+def health_check():
+    return {"status": "ok", "message": "Service is healthy"}
 
 # For local development
 if __name__ == '__main__':
