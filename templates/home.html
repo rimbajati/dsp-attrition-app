@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Employee Attrition Analysis{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h1>Welcome to Employee Attrition Analysis</h1>
+    <p class="lead">Analyze and predict employee attrition patterns using advanced machine learning techniques.</p>
+    <div style="margin-top: 2rem;">
+        <a href="/dashboard" class="btn">View Analytics Dashboard</a>
+    </div>
+</div>
+
+<div class="dashboard-grid">
+    <div class="card">
+        <h2>Key Features</h2>
+        <ul style="list-style-position: inside; margin-top: 1rem;">
+            <li>Real-time attrition analysis</li>
+            <li>Predictive modeling</li>
+            <li>Interactive visualizations</li>
+            <li>Detailed insights</li>
+        </ul>
+    </div>
+    
+    <div class="card">
+        <h2>Why Use Our Tool?</h2>
+        <p>Make data-driven decisions about employee retention using our advanced analytics platform. Identify patterns and take proactive measures to improve workforce stability.</p>
+    </div>
+</div>
+{% endblock %}
